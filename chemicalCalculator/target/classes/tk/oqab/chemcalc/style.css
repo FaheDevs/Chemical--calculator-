@@ -1,0 +1,23 @@
+.root{
+    -fx-font-weight: bold;
+    -fx-font-size: 26px;
+    -fx-font-family: Arial;
+
+}
+
+#theBtn{
+    -fx-padding: 10;
+    -fx-background-radius: 15;
+    -fx-border-radius: 15;
+}
+#theBtn:hover{
+    -fx-opacity: 1.0;
+}
+
+#theField{
+    -fx-background-radius: 15;
+    -fx-border-radius: 15;
+}
+#errorMsg{
+    -fx-font-size: 12px;
+}

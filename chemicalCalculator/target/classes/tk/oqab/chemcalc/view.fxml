@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/16" fx:controller="tk.oqab.chemcalc.Controller">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <AnchorPane prefHeight="600.0" prefWidth="600.0">
+         <children>
+            <TextField fx:id="theField" alignment="CENTER" focusTraversable="false" layoutX="113.0" layoutY="86.0" onKeyTyped="#resetErrorMsg" prefHeight="43.0" prefWidth="374.0" promptText="اكتب اسم المركب الكيميائي">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </TextField>
+            <Button fx:id="theBtn" alignment="CENTER" depthTest="ENABLE" focusTraversable="false" layoutX="228.0" layoutY="172.0" mnemonicParsing="false" onAction="#getResult" opacity="0.86" pickOnBounds="false" text="احسب الكتلة المولية">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Arial" size="20.0" />
+               </font>
+            </Button>
+            <Text fx:id="errorMsg" fill="RED" layoutX="183.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="الرجاء كتابة المركب بالشكل الصحيح" textAlignment="CENTER" visible="false" wrappingWidth="235.0" />
+            <GridPane alignment="CENTER" layoutX="48.0" layoutY="238.0" prefHeight="237.0" prefWidth="477.0">
+              <columnConstraints>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="64.0" minHeight="10.0" prefHeight="51.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="87.0" minHeight="10.0" prefHeight="49.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="85.0" minHeight="10.0" prefHeight="49.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="85.0" minHeight="10.0" prefHeight="52.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="90.0" minHeight="10.0" prefHeight="55.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Text fx:id="title1" strokeType="OUTSIDE" strokeWidth="0.0" text="المركب يتكون من" textAlignment="CENTER" visible="false">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="contentText" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Arial Bold" size="30.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="resMsg" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="Arial" size="30.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="result" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.rowIndex="4">
+                     <font>
+                        <Font name="Arial Bold" size="30.0" />
+                     </font>
+                  </Text>
+               </children>
+            </GridPane>
+         </children>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </AnchorPane>
+   </children>
+</GridPane>
